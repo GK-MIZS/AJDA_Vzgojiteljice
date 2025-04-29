@@ -80,9 +80,9 @@ var raw_vprasanja = [
     vprasanje: "Ali obstajajo posebne potrebe ali opažanja glede {{ ime }}?",
   },
 ];
-/*
-vzgojiteljice: [{ id: 11, ime: "Ajda", vprasanja: [], spremnoBesedilo : "" }], // placeholder
-*/
+
+var raw_vzgojiteljice= [{ id: 11, ime: "Ajda", vprasanja: [], spremnoBesedilo : "" }]; // placeholder
+
 var raw_odgovori = [
   {
     id: 1,
@@ -128,7 +128,7 @@ createApp({
       odgovori: raw_odgovori,
       // data za vprasalnik
       // vzgojiteljice
-      vzgojiteljice: [], // placeholder
+      vzgojiteljice: raw_vzgojiteljice, // placeholder
       imeVzgojiteljice: "",
       // odgovori
       modal_odgovori: {}, // modal za odgovore

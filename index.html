@@ -88,12 +88,12 @@
                                 </tr>
                                 <!-- dodatna vprašanja -->
                                 <tr class="align-middle" v-for="(vpr, index) in dodatnaVprasanjaByName(v.ime)">
-                                    <td>{{ index + 1 + vprasanja.length }}. </td>
-                                    <td>{{ replaceName(vpr.vprasanje, v.ime) }}</td>
-                                    <td class="text-center">
+                                    <td class="table-warning">{{ index + 1 + vprasanja.length }}. </td>
+                                    <td class="table-warning">{{ replaceName(vpr.vprasanje, v.ime) }}</td>
+                                    <td class="text-center table-warning">
                                         <span class="badge rounded-pill text-bg-success p-3">Dodano</span>
                                     </td>
-                                    <td class="text-center">
+                                    <td class="text-center table-warning">
                                         <button class="btn btn-sm btn-light border-1 border-dark rounded-5 p-2"
                                             @click="izberiOdstraniDODATNE(vpr.id)">Zbriši</button>
                                     </td>
@@ -137,7 +137,7 @@
         </table>
 
         <!-- Modal -->
-        <div class="modal fade" id="preglej_odgovore_modal" tabindex="-1" aria-labelledby="preglej_odgovore_modalLabel"
+        <div class="modal fade" id="preglej_odgovore_modal" data-bs-backdrop="static" tabindex="-1" aria-labelledby="preglej_odgovore_modalLabel"
             aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered modal-xl">
                 <div class="modal-content">
